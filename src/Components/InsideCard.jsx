@@ -1,6 +1,6 @@
 import React from 'react'
 
-const InsideCard = ({ item }) => {
+const InsideCard = ({ item, handleChange }) => {
     const { title, img, author, amount, price } = item
     return (
         <>
@@ -11,9 +11,9 @@ const InsideCard = ({ item }) => {
                         <p className='font-bold '>{title}</p>
                         <p className='font-bold '>{author}</p>
                         <div className='flex mt-3 gap-3 max-sm:mt-5 items-center'>
-                            <button className='px-3 py-1 bg-blue-500 text-white rounded'>+</button>
+                            <button className='px-3 py-1 bg-blue-500 text-white rounded' onClick={() => handleChange('add', item)}>+</button>
                             <p>{amount}</p>
-                            <button className='px-3 py-1 bg-blue-500 text-white rounded'>-</button>
+                            <button className='px-3 py-1 bg-blue-500 text-white rounded' onClick={() => handleChange('sub', item)}>-</button>
                         </div>
                         <p className='mt-4 font-thin text-slate-500 '>Price: $({price} x {amount})</p>
                     </div>

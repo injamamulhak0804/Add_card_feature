@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Card = ({ item, handleClick }) => {
-    const { img, title, author, price, id } = item;
+    const { img, title, author, price } = item;
     return (
         <>
             <div className='h-[24rem] gap-y-1 rounded-md pb-10 pt-5

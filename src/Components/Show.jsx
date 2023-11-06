@@ -1,7 +1,7 @@
 import React from 'react'
 import InsideCard from './InsideCard'
 
-const Show = ({ display }) => {
+const Show = ({ display, handleChange }) => {
     let price = 0
     
     const total_price = display.map((item) => {
@@ -22,7 +22,7 @@ const Show = ({ display }) => {
                             <p className='text-2xl mb-0'>CARD</p>
                             {
                                 display.map((item, index) => (
-                                    <InsideCard item={item} key={index} />
+                                    <InsideCard item={item} key={index} handleChange={handleChange} />
                                 ))
                             }
                         </div>
