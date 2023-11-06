@@ -1,7 +1,6 @@
 import React from 'react'
 import { SlBasket } from 'react-icons/sl';
 const Nav = ({ count, setShow, show, warning }) => {
-    console.log(warning);
     return (
         <nav className='list-none text-xl 
         flex justify-between h-20 px-10 items-center'>

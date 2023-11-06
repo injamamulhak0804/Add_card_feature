@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Card = ({ img, title, author, price, handleClick, id }) => {
+const Card = ({ item, handleClick }) => {
+    const { img, title, author, price, id } = item;
     return (
         <>
             <div className='h-[24rem] gap-y-1 rounded-md pb-10 pt-5
@@ -10,7 +11,7 @@ const Card = ({ img, title, author, price, handleClick, id }) => {
                 <p className='font-thin'>{title}</p>
                 <p className=' '>{author.length >= 20 ? `${author.slice(0, 18)}......${'more'}` : author}</p>
                 <p>${price}</p>
-                <button type='button' onClick={() => handleClick(id)} className='px-6 text-white bg-red-500 py-1 rounded '>Add To Card</button>
+                <button type='button' onClick={() => handleClick(item)} className='px-6 text-white bg-red-500 py-1 rounded '>Add To Card</button>
             </div>
         </>
     )

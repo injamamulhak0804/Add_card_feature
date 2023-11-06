@@ -8,7 +8,7 @@ const Main = ({ handleClick }) => {
     gap-x-40 gap-y-20 items-center flex min-h-full flex-wrap mt-20'>
       {
         list.map((item, index) => (
-          <Card handleClick={handleClick} key={index} {...item} />
+          <Card handleClick={handleClick} key={index} item = {item} />
         ))
       }
     </div>

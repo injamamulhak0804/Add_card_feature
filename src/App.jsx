@@ -12,24 +12,19 @@ function App() {
 
   const handleClick = (user_item) => {
     let isPersent = false
-    display.map((item) => {
-      if (item.id === user_item) {
-        setWarning(true)
-        setTimeout(() => {
-          setWarning(false)
-        }, 2000)
-      }
+    display.forEach((item) => {
+      if (item.id === user_item.id)
+      isPersent = true
     })
-
-    const sample = display.filter((item) => {
-      return item.id === user_item
-    })
+    if (isPersent) {
+      setWarning(true)
+      setTimeout(() => {
+        setWarning(false)
+      }, 2000)
+      return;
+    }
+    setDisplay([...display, user_item])
     setCount(count + 1)
-    const id = list.find((item) => {
-      return item.id === user_item
-    })
-    const newarr = [...display, id]
-    setDisplay(newarr)
   }
 
 
